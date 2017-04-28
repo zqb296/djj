@@ -7,10 +7,12 @@
 //
 
 #define kHandleError(error)  if(error){ NSLog(@"%@",error); exit(1);}
-#define kSmaple     48000
+#define kSmaple     44100
 #define kDuration   0.005
 #define kPlaySize   1
 #define kBufferNums   3
+
+#define kRecordDataPacketsSize   (1024)
 
 #define kOutoutBus 0
 #define kInputBus  1
@@ -172,8 +174,8 @@ RecordStruct    recordStruct;
                                     &_inputProc, sizeof(_inputProc)),
                "couldnt set remote i/o render callback for input");
 	
-	UInt32 openVoiceProcessing = 1;
-	OSStatus result = AudioUnitSetProperty(_toneUnit, kAUVoiceIOProperty_BypassVoiceProcessing, kAudioUnitScope_Global, 1, &openVoiceProcessing, sizeof(openVoiceProcessing));
+	UInt32 echoCancellation = 0;//0 开启回音消除
+	OSStatus result = AudioUnitSetProperty(_toneUnit, kAUVoiceIOProperty_BypassVoiceProcessing, kAudioUnitScope_Global, 0, &echoCancellation, sizeof(echoCancellation));
 	
 	CheckError(result,"Error setting passVoiceProcessing");
     CheckError(AudioUnitInitialize(_toneUnit),
@@ -258,7 +260,7 @@ RecordStruct    recordStruct;
     
     for (int i = 0; i < kBufferNums; i++) {
         AudioQueueBufferRef buffer;
-        CheckError(AudioQueueAllocateBuffer(_playQueue, 1024, &buffer), "cant alloc buff");
+        CheckError(AudioQueueAllocateBuffer(_playQueue, kRecordDataPacketsSize, &buffer), "cant alloc buff");
         BNRAudioQueueBuffer *buffObj = [[BNRAudioQueueBuffer alloc] init];
         buffObj.buffer = buffer;
         [_buffers addObject:buffObj];
@@ -326,7 +328,7 @@ OSStatus inputRenderTone(
         recordStruct.rear = (recordStruct.rear+1)%kRecordDataLen;
     }
     
-    if ((lastTimeRear/1024 + 1) == (recordStruct.rear/1024)) {
+    if ((lastTimeRear/kRecordDataPacketsSize + 1) == (recordStruct.rear/kRecordDataPacketsSize)) {
         pthread_cond_signal(&recordCond);
     }
     return status;
@@ -354,14 +356,14 @@ OSStatus inputRenderTone(
             
             
             pthread_mutex_lock(&recordLock);
-            while (ABS(recordStruct.rear - recordStruct.front) < 1024) {
+            while (ABS(recordStruct.rear - recordStruct.front) < kRecordDataPacketsSize) {
                 pthread_cond_wait(&recordCond, &recordLock);
             }
             pthread_mutex_unlock(&recordLock);
             
-            SInt16 *readyData = (SInt16 *)calloc(1024, sizeof(SInt16));
-            memcpy(readyData, &recordStruct.recordArr[recordStruct.front], 1024*sizeof(SInt16));
-            recordStruct.front = (recordStruct.front+1024)%kRecordDataLen;
+            SInt16 *readyData = (SInt16 *)calloc(kRecordDataPacketsSize, sizeof(SInt16));
+            memcpy(readyData, &recordStruct.recordArr[recordStruct.front], kRecordDataPacketsSize*sizeof(SInt16));
+            recordStruct.front = (recordStruct.front+kRecordDataPacketsSize)%kRecordDataLen;
             UInt32 packetSize = 1;
             
             AudioStreamPacketDescription *outputPacketDescriptions = malloc(sizeof(AudioStreamPacketDescription)*packetSize);
@@ -470,8 +472,8 @@ OSStatus encodeConverterComplexInputDataProc(AudioConverterRef inAudioConverter,
 {
     ioData->mBuffers[0].mData = inUserData;
     ioData->mBuffers[0].mNumberChannels = 1;
-    ioData->mBuffers[0].mDataByteSize = 1024*2;
-    *ioNumberDataPackets = 1024;
+    ioData->mBuffers[0].mDataByteSize = kRecordDataPacketsSize * 2;
+    *ioNumberDataPackets = kRecordDataPacketsSize;
     return 0;
 }
 static void CheckError(OSStatus error,const char *operaton){

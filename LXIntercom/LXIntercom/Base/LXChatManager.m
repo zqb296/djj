@@ -82,24 +82,26 @@
 
 - (void)pushData:(id)data toTopic:(NSString *)topic
 {
-    NSData *pushData = data;
-    if ([data isKindOfClass:[NSString class]]) {
-        pushData = [data dataUsingEncoding:NSUTF8StringEncoding];
-    }
-    
-    [self.session publishAndWaitData:pushData
-                             onTopic:topic
-                              retain:NO
-                                 qos:MQTTQosLevelAtMostOnce];
+	
+	[[JYVoiceConvertHandle shareInstance] playWithData:data];
+//    NSData *pushData = data;
+//    if ([data isKindOfClass:[NSString class]]) {
+//        pushData = [data dataUsingEncoding:NSUTF8StringEncoding];
+//    }
+//    
+//    [self.session publishAndWaitData:pushData
+//                             onTopic:topic
+//                              retain:NO
+//                                 qos:MQTTQosLevelAtMostOnce];
 }
 
 - (void)newMessage:(MQTTSession *)session data:(NSData *)data onTopic:(NSString *)topic qos:(MQTTQosLevel)qos retained:(BOOL)retained mid:(unsigned int)mid
 {
-    if ([topic containsString:@"voice"])
-    {
-        [[JYVoiceConvertHandle shareInstance] playWithData:data];
-    }
- 
+//    if ([topic containsString:@"voice"])
+//    {
+//        [[JYVoiceConvertHandle shareInstance] playWithData:data];
+//    }
+// 
 }
 
 
