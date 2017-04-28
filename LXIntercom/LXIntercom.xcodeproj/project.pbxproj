@@ -1,0 +1,680 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD1CE59D1EA7588B0007D9E2 /* LXBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1CE59C1EA7588B0007D9E2 /* LXBaseVC.m */; };
+		CD1CE5A01EA75C010007D9E2 /* LXBaseNavVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1CE59F1EA75C010007D9E2 /* LXBaseNavVC.m */; };
+		CD2F41791EA8B86B00A96470 /* LXDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2F41781EA8B86B00A96470 /* LXDataManager.m */; };
+		CD3641D71EA7318B00936067 /* LXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3641D61EA7318B00936067 /* LXAppDelegate.m */; };
+		CD491A6E1EA6F239007C7359 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD491A6D1EA6F239007C7359 /* main.m */; };
+		CD491A7C1EA6F239007C7359 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD491A7A1EA6F239007C7359 /* LaunchScreen.storyboard */; };
+		CD598CED1EA897E3002BCC4B /* LXRoomM.m in Sources */ = {isa = PBXBuildFile; fileRef = CD598CEC1EA897E3002BCC4B /* LXRoomM.m */; };
+		CD598CF11EA8A092002BCC4B /* LXUserM.m in Sources */ = {isa = PBXBuildFile; fileRef = CD598CF01EA8A092002BCC4B /* LXUserM.m */; };
+		CD598CF41EA8A650002BCC4B /* LXLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = CD598CF31EA8A650002BCC4B /* LXLoginService.m */; };
+		CD66FF401EAEF2E500E0A320 /* microphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD66FF3F1EAEF2E500E0A320 /* microphone@2x.png */; };
+		CD66FF441EAEF72D00E0A320 /* LXTalkingButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CD66FF431EAEF72D00E0A320 /* LXTalkingButton.m */; };
+		CD66FF471EAEF87400E0A320 /* LXWaveLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CD66FF461EAEF87400E0A320 /* LXWaveLayer.m */; };
+		CDB78C831EA9A9A300959B28 /* JYAudioData.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB78C801EA9A9A300959B28 /* JYAudioData.m */; };
+		CDB78C841EA9A9A300959B28 /* JYVoiceConvertHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB78C821EA9A9A300959B28 /* JYVoiceConvertHandle.m */; };
+		CDB78C8A1EA9AA8900959B28 /* LXChatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB78C891EA9AA8900959B28 /* LXChatManager.m */; };
+		CDB78C911EA9AE8B00959B28 /* LXChatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB78C901EA9AE8B00959B28 /* LXChatVC.m */; };
+		CDC880631EA856C7006D5C1C /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC880621EA856C7006D5C1C /* Chat.storyboard */; };
+		CDC880671EA86002006D5C1C /* room@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDC880661EA86002006D5C1C /* room@2x.png */; };
+		CDC8806B1EA86485006D5C1C /* LXServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC8806A1EA86485006D5C1C /* LXServiceManager.m */; };
+		CDC8806E1EA88401006D5C1C /* LXRoomService.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC8806D1EA88401006D5C1C /* LXRoomService.m */; };
+		CDC880711EA88649006D5C1C /* LXContactService.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC880701EA88649006D5C1C /* LXContactService.m */; };
+		CDC880751EA888B6006D5C1C /* login_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = CDC880741EA888B6006D5C1C /* login_bg.png */; };
+		CDD38C981EAF483700231984 /* stop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDD38C971EAF483700231984 /* stop@2x.png */; };
+		CDDA0AD81EA73AA700F2934E /* LXContactVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDA0AC81EA73AA700F2934E /* LXContactVC.m */; };
+		CDDA0AD91EA73AA700F2934E /* LXLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDA0ACB1EA73AA700F2934E /* LXLoginVC.m */; };
+		CDDA0ADA1EA73AA700F2934E /* LXRoomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDA0ACE1EA73AA700F2934E /* LXRoomVC.m */; };
+		CDDA0ADB1EA73AA700F2934E /* LXSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDA0AD11EA73AA700F2934E /* LXSettingVC.m */; };
+		CDDA0ADD1EA73AA700F2934E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDDA0AD41EA73AA700F2934E /* Login.storyboard */; };
+		CDDA0ADE1EA73AA700F2934E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDDA0AD51EA73AA700F2934E /* Main.storyboard */; };
+		CDDA0AE31EA73AEA00F2934E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDDA0AE21EA73AEA00F2934E /* Assets.xcassets */; };
+		CDDA0AEA1EA73B4B00F2934E /* LXUITool.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDA0AE91EA73B4B00F2934E /* LXUITool.m */; };
+		CDDA0AEC1EA73F7200F2934E /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = CDDA0AEB1EA73F7200F2934E /* photo.png */; };
+		CDF858C51EB033CF004F38D9 /* LXCreamtRoomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF858C41EB033CF004F38D9 /* LXCreamtRoomVC.m */; };
+		FAEB3CB141489E1B80D5D0B2 /* libPods-LXIntercom.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B3792532763151CC8D0866 /* libPods-LXIntercom.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		99BC4FAC174FE156A0F65D17 /* Pods-LXIntercom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LXIntercom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LXIntercom/Pods-LXIntercom.debug.xcconfig"; sourceTree = "<group>"; };
+		C2B3792532763151CC8D0866 /* libPods-LXIntercom.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LXIntercom.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD1CE59B1EA7588B0007D9E2 /* LXBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXBaseVC.h; sourceTree = "<group>"; };
+		CD1CE59C1EA7588B0007D9E2 /* LXBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXBaseVC.m; sourceTree = "<group>"; };
+		CD1CE59E1EA75C010007D9E2 /* LXBaseNavVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXBaseNavVC.h; sourceTree = "<group>"; };
+		CD1CE59F1EA75C010007D9E2 /* LXBaseNavVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXBaseNavVC.m; sourceTree = "<group>"; };
+		CD2F41771EA8B86B00A96470 /* LXDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDataManager.h; sourceTree = "<group>"; };
+		CD2F41781EA8B86B00A96470 /* LXDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDataManager.m; sourceTree = "<group>"; };
+		CD3641D51EA7318B00936067 /* LXAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXAppDelegate.h; sourceTree = "<group>"; };
+		CD3641D61EA7318B00936067 /* LXAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXAppDelegate.m; sourceTree = "<group>"; };
+		CD491A691EA6F239007C7359 /* LXIntercom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LXIntercom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD491A6D1EA6F239007C7359 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CD491A7B1EA6F239007C7359 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD491A7D1EA6F239007C7359 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD598CEB1EA897E3002BCC4B /* LXRoomM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXRoomM.h; sourceTree = "<group>"; };
+		CD598CEC1EA897E3002BCC4B /* LXRoomM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXRoomM.m; sourceTree = "<group>"; };
+		CD598CEF1EA8A092002BCC4B /* LXUserM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXUserM.h; sourceTree = "<group>"; };
+		CD598CF01EA8A092002BCC4B /* LXUserM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXUserM.m; sourceTree = "<group>"; };
+		CD598CF21EA8A650002BCC4B /* LXLoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXLoginService.h; sourceTree = "<group>"; };
+		CD598CF31EA8A650002BCC4B /* LXLoginService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXLoginService.m; sourceTree = "<group>"; };
+		CD66FF3F1EAEF2E500E0A320 /* microphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "microphone@2x.png"; sourceTree = "<group>"; };
+		CD66FF421EAEF72D00E0A320 /* LXTalkingButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXTalkingButton.h; sourceTree = "<group>"; };
+		CD66FF431EAEF72D00E0A320 /* LXTalkingButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTalkingButton.m; sourceTree = "<group>"; };
+		CD66FF451EAEF87400E0A320 /* LXWaveLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXWaveLayer.h; sourceTree = "<group>"; };
+		CD66FF461EAEF87400E0A320 /* LXWaveLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXWaveLayer.m; sourceTree = "<group>"; };
+		CDB78C7F1EA9A9A300959B28 /* JYAudioData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYAudioData.h; sourceTree = "<group>"; };
+		CDB78C801EA9A9A300959B28 /* JYAudioData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYAudioData.m; sourceTree = "<group>"; };
+		CDB78C811EA9A9A300959B28 /* JYVoiceConvertHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYVoiceConvertHandle.h; sourceTree = "<group>"; };
+		CDB78C821EA9A9A300959B28 /* JYVoiceConvertHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYVoiceConvertHandle.m; sourceTree = "<group>"; };
+		CDB78C881EA9AA8900959B28 /* LXChatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXChatManager.h; sourceTree = "<group>"; };
+		CDB78C891EA9AA8900959B28 /* LXChatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXChatManager.m; sourceTree = "<group>"; };
+		CDB78C8F1EA9AE8B00959B28 /* LXChatVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXChatVC.h; sourceTree = "<group>"; };
+		CDB78C901EA9AE8B00959B28 /* LXChatVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXChatVC.m; sourceTree = "<group>"; };
+		CDC880621EA856C7006D5C1C /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		CDC880651EA85DB7006D5C1C /* LXPCH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXPCH.pch; sourceTree = "<group>"; };
+		CDC880661EA86002006D5C1C /* room@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "room@2x.png"; path = "../room@2x.png"; sourceTree = "<group>"; };
+		CDC880691EA86485006D5C1C /* LXServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXServiceManager.h; sourceTree = "<group>"; };
+		CDC8806A1EA86485006D5C1C /* LXServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXServiceManager.m; sourceTree = "<group>"; };
+		CDC8806C1EA88401006D5C1C /* LXRoomService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXRoomService.h; sourceTree = "<group>"; };
+		CDC8806D1EA88401006D5C1C /* LXRoomService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXRoomService.m; sourceTree = "<group>"; };
+		CDC8806F1EA88649006D5C1C /* LXContactService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXContactService.h; sourceTree = "<group>"; };
+		CDC880701EA88649006D5C1C /* LXContactService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXContactService.m; sourceTree = "<group>"; };
+		CDC880741EA888B6006D5C1C /* login_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_bg.png; sourceTree = "<group>"; };
+		CDD38C971EAF483700231984 /* stop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stop@2x.png"; sourceTree = "<group>"; };
+		CDDA0AC71EA73AA700F2934E /* LXContactVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXContactVC.h; sourceTree = "<group>"; };
+		CDDA0AC81EA73AA700F2934E /* LXContactVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXContactVC.m; sourceTree = "<group>"; };
+		CDDA0ACA1EA73AA700F2934E /* LXLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXLoginVC.h; sourceTree = "<group>"; };
+		CDDA0ACB1EA73AA700F2934E /* LXLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXLoginVC.m; sourceTree = "<group>"; };
+		CDDA0ACD1EA73AA700F2934E /* LXRoomVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXRoomVC.h; sourceTree = "<group>"; };
+		CDDA0ACE1EA73AA700F2934E /* LXRoomVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXRoomVC.m; sourceTree = "<group>"; };
+		CDDA0AD01EA73AA700F2934E /* LXSettingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXSettingVC.h; sourceTree = "<group>"; };
+		CDDA0AD11EA73AA700F2934E /* LXSettingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXSettingVC.m; sourceTree = "<group>"; };
+		CDDA0AD41EA73AA700F2934E /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		CDDA0AD51EA73AA700F2934E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CDDA0AE21EA73AEA00F2934E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDDA0AE81EA73B4B00F2934E /* LXUITool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXUITool.h; sourceTree = "<group>"; };
+		CDDA0AE91EA73B4B00F2934E /* LXUITool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXUITool.m; sourceTree = "<group>"; };
+		CDDA0AEB1EA73F7200F2934E /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
+		CDF858C31EB033CF004F38D9 /* LXCreamtRoomVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXCreamtRoomVC.h; sourceTree = "<group>"; };
+		CDF858C41EB033CF004F38D9 /* LXCreamtRoomVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXCreamtRoomVC.m; sourceTree = "<group>"; };
+		F55335D9803221B47FE3FF9A /* Pods-LXIntercom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LXIntercom.release.xcconfig"; path = "Pods/Target Support Files/Pods-LXIntercom/Pods-LXIntercom.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD491A661EA6F239007C7359 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAEB3CB141489E1B80D5D0B2 /* libPods-LXIntercom.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		147BC1B50AD6F116572DDB01 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2B3792532763151CC8D0866 /* libPods-LXIntercom.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD2F41721EA8B58E00A96470 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CD2F41761EA8B85500A96470 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CD2F41771EA8B86B00A96470 /* LXDataManager.h */,
+				CD2F41781EA8B86B00A96470 /* LXDataManager.m */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		CD491A601EA6F239007C7359 = {
+			isa = PBXGroup;
+			children = (
+				CD491A6B1EA6F239007C7359 /* LXIntercom */,
+				CD491A6A1EA6F239007C7359 /* Products */,
+				ED6132ED49508E83AFB977BB /* Pods */,
+				147BC1B50AD6F116572DDB01 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CD491A6A1EA6F239007C7359 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD491A691EA6F239007C7359 /* LXIntercom.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD491A6B1EA6F239007C7359 /* LXIntercom */ = {
+			isa = PBXGroup;
+			children = (
+				CD3641D51EA7318B00936067 /* LXAppDelegate.h */,
+				CD3641D61EA7318B00936067 /* LXAppDelegate.m */,
+				CDC880651EA85DB7006D5C1C /* LXPCH.pch */,
+				CDDA0AE41EA73AF500F2934E /* Base */,
+				CDDA0AE11EA73AD300F2934E /* Source */,
+				CDC880681EA862A4006D5C1C /* Service */,
+				CD2F41761EA8B85500A96470 /* Data */,
+				CDDA0AC51EA73AA700F2934E /* Main */,
+				CD491A7A1EA6F239007C7359 /* LaunchScreen.storyboard */,
+				CD491A7D1EA6F239007C7359 /* Info.plist */,
+				CD491A6C1EA6F239007C7359 /* Supporting Files */,
+			);
+			path = LXIntercom;
+			sourceTree = "<group>";
+		};
+		CD491A6C1EA6F239007C7359 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CD491A6D1EA6F239007C7359 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CD598CEA1EA897D5002BCC4B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD598CEB1EA897E3002BCC4B /* LXRoomM.h */,
+				CD598CEC1EA897E3002BCC4B /* LXRoomM.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CD598CEE1EA8A080002BCC4B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD598CEF1EA8A092002BCC4B /* LXUserM.h */,
+				CD598CF01EA8A092002BCC4B /* LXUserM.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CD66FF411EAEF69C00E0A320 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CD66FF451EAEF87400E0A320 /* LXWaveLayer.h */,
+				CD66FF461EAEF87400E0A320 /* LXWaveLayer.m */,
+				CD66FF421EAEF72D00E0A320 /* LXTalkingButton.h */,
+				CD66FF431EAEF72D00E0A320 /* LXTalkingButton.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CDB78C7E1EA9A9A300959B28 /* ZYRealTimeAudio */ = {
+			isa = PBXGroup;
+			children = (
+				CDB78C7F1EA9A9A300959B28 /* JYAudioData.h */,
+				CDB78C801EA9A9A300959B28 /* JYAudioData.m */,
+				CDB78C811EA9A9A300959B28 /* JYVoiceConvertHandle.h */,
+				CDB78C821EA9A9A300959B28 /* JYVoiceConvertHandle.m */,
+			);
+			path = ZYRealTimeAudio;
+			sourceTree = "<group>";
+		};
+		CDB78C8E1EA9ADE400959B28 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				CD66FF411EAEF69C00E0A320 /* View */,
+				CDB78C8F1EA9AE8B00959B28 /* LXChatVC.h */,
+				CDB78C901EA9AE8B00959B28 /* LXChatVC.m */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		CDC880681EA862A4006D5C1C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CD598CF21EA8A650002BCC4B /* LXLoginService.h */,
+				CD598CF31EA8A650002BCC4B /* LXLoginService.m */,
+				CDC880691EA86485006D5C1C /* LXServiceManager.h */,
+				CDC8806A1EA86485006D5C1C /* LXServiceManager.m */,
+				CDC8806C1EA88401006D5C1C /* LXRoomService.h */,
+				CDC8806D1EA88401006D5C1C /* LXRoomService.m */,
+				CDC8806F1EA88649006D5C1C /* LXContactService.h */,
+				CDC880701EA88649006D5C1C /* LXContactService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CDDA0AC51EA73AA700F2934E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CDB78C8E1EA9ADE400959B28 /* Chat */,
+				CDDA0ACC1EA73AA700F2934E /* Room */,
+				CDDA0AC61EA73AA700F2934E /* Contact */,
+				CDDA0ACF1EA73AA700F2934E /* Setting */,
+				CDDA0AC91EA73AA700F2934E /* Login */,
+				CDDA0AD21EA73AA700F2934E /* Storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CDDA0AC61EA73AA700F2934E /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				CDDA0AC71EA73AA700F2934E /* LXContactVC.h */,
+				CDDA0AC81EA73AA700F2934E /* LXContactVC.m */,
+				CD598CEE1EA8A080002BCC4B /* Model */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		CDDA0AC91EA73AA700F2934E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CDDA0ACA1EA73AA700F2934E /* LXLoginVC.h */,
+				CDDA0ACB1EA73AA700F2934E /* LXLoginVC.m */,
+				CD2F41721EA8B58E00A96470 /* Model */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CDDA0ACC1EA73AA700F2934E /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				CDF858C21EB033CF004F38D9 /* ViewController */,
+				CDDA0ACD1EA73AA700F2934E /* LXRoomVC.h */,
+				CDDA0ACE1EA73AA700F2934E /* LXRoomVC.m */,
+				CD598CEA1EA897D5002BCC4B /* Model */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		CDDA0ACF1EA73AA700F2934E /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				CDDA0AD01EA73AA700F2934E /* LXSettingVC.h */,
+				CDDA0AD11EA73AA700F2934E /* LXSettingVC.m */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		CDDA0AD21EA73AA700F2934E /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				CDDA0AD51EA73AA700F2934E /* Main.storyboard */,
+				CDDA0AD41EA73AA700F2934E /* Login.storyboard */,
+				CDC880621EA856C7006D5C1C /* Chat.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		CDDA0AE11EA73AD300F2934E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				CDD38C971EAF483700231984 /* stop@2x.png */,
+				CD66FF3F1EAEF2E500E0A320 /* microphone@2x.png */,
+				CDC880741EA888B6006D5C1C /* login_bg.png */,
+				CDC880661EA86002006D5C1C /* room@2x.png */,
+				CDDA0AEB1EA73F7200F2934E /* photo.png */,
+				CDDA0AE21EA73AEA00F2934E /* Assets.xcassets */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		CDDA0AE41EA73AF500F2934E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CDB78C7E1EA9A9A300959B28 /* ZYRealTimeAudio */,
+				CDDA0AE81EA73B4B00F2934E /* LXUITool.h */,
+				CDDA0AE91EA73B4B00F2934E /* LXUITool.m */,
+				CD1CE59B1EA7588B0007D9E2 /* LXBaseVC.h */,
+				CD1CE59C1EA7588B0007D9E2 /* LXBaseVC.m */,
+				CD1CE59E1EA75C010007D9E2 /* LXBaseNavVC.h */,
+				CD1CE59F1EA75C010007D9E2 /* LXBaseNavVC.m */,
+				CDB78C881EA9AA8900959B28 /* LXChatManager.h */,
+				CDB78C891EA9AA8900959B28 /* LXChatManager.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		CDF858C21EB033CF004F38D9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CDF858C31EB033CF004F38D9 /* LXCreamtRoomVC.h */,
+				CDF858C41EB033CF004F38D9 /* LXCreamtRoomVC.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		ED6132ED49508E83AFB977BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				99BC4FAC174FE156A0F65D17 /* Pods-LXIntercom.debug.xcconfig */,
+				F55335D9803221B47FE3FF9A /* Pods-LXIntercom.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD491A681EA6F239007C7359 /* LXIntercom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD491A801EA6F239007C7359 /* Build configuration list for PBXNativeTarget "LXIntercom" */;
+			buildPhases = (
+				C71FC063355FE2063167D844 /* [CP] Check Pods Manifest.lock */,
+				CD491A651EA6F239007C7359 /* Sources */,
+				CD491A661EA6F239007C7359 /* Frameworks */,
+				CD491A671EA6F239007C7359 /* Resources */,
+				153387D01B7112B4384B14BF /* [CP] Embed Pods Frameworks */,
+				27B51A1DCE4821F697DEBC3A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LXIntercom;
+			productName = LXIntercom;
+			productReference = CD491A691EA6F239007C7359 /* LXIntercom.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD491A611EA6F239007C7359 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LX;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = LX;
+				TargetAttributes = {
+					CD491A681EA6F239007C7359 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = U38DW7396K;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CD491A641EA6F239007C7359 /* Build configuration list for PBXProject "LXIntercom" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD491A601EA6F239007C7359;
+			productRefGroup = CD491A6A1EA6F239007C7359 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD491A681EA6F239007C7359 /* LXIntercom */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD491A671EA6F239007C7359 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDDA0ADD1EA73AA700F2934E /* Login.storyboard in Resources */,
+				CDD38C981EAF483700231984 /* stop@2x.png in Resources */,
+				CDDA0ADE1EA73AA700F2934E /* Main.storyboard in Resources */,
+				CDC880751EA888B6006D5C1C /* login_bg.png in Resources */,
+				CD491A7C1EA6F239007C7359 /* LaunchScreen.storyboard in Resources */,
+				CDDA0AE31EA73AEA00F2934E /* Assets.xcassets in Resources */,
+				CDC880671EA86002006D5C1C /* room@2x.png in Resources */,
+				CDDA0AEC1EA73F7200F2934E /* photo.png in Resources */,
+				CDC880631EA856C7006D5C1C /* Chat.storyboard in Resources */,
+				CD66FF401EAEF2E500E0A320 /* microphone@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		153387D01B7112B4384B14BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LXIntercom/Pods-LXIntercom-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		27B51A1DCE4821F697DEBC3A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LXIntercom/Pods-LXIntercom-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C71FC063355FE2063167D844 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD491A651EA6F239007C7359 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD598CF41EA8A650002BCC4B /* LXLoginService.m in Sources */,
+				CDB78C841EA9A9A300959B28 /* JYVoiceConvertHandle.m in Sources */,
+				CD598CF11EA8A092002BCC4B /* LXUserM.m in Sources */,
+				CD66FF441EAEF72D00E0A320 /* LXTalkingButton.m in Sources */,
+				CDC8806E1EA88401006D5C1C /* LXRoomService.m in Sources */,
+				CD2F41791EA8B86B00A96470 /* LXDataManager.m in Sources */,
+				CD1CE5A01EA75C010007D9E2 /* LXBaseNavVC.m in Sources */,
+				CD598CED1EA897E3002BCC4B /* LXRoomM.m in Sources */,
+				CDB78C8A1EA9AA8900959B28 /* LXChatManager.m in Sources */,
+				CDC880711EA88649006D5C1C /* LXContactService.m in Sources */,
+				CDB78C831EA9A9A300959B28 /* JYAudioData.m in Sources */,
+				CDB78C911EA9AE8B00959B28 /* LXChatVC.m in Sources */,
+				CDDA0AD91EA73AA700F2934E /* LXLoginVC.m in Sources */,
+				CDDA0AEA1EA73B4B00F2934E /* LXUITool.m in Sources */,
+				CD3641D71EA7318B00936067 /* LXAppDelegate.m in Sources */,
+				CDDA0AD81EA73AA700F2934E /* LXContactVC.m in Sources */,
+				CDF858C51EB033CF004F38D9 /* LXCreamtRoomVC.m in Sources */,
+				CD66FF471EAEF87400E0A320 /* LXWaveLayer.m in Sources */,
+				CDC8806B1EA86485006D5C1C /* LXServiceManager.m in Sources */,
+				CD491A6E1EA6F239007C7359 /* main.m in Sources */,
+				CD1CE59D1EA7588B0007D9E2 /* LXBaseVC.m in Sources */,
+				CDDA0ADA1EA73AA700F2934E /* LXRoomVC.m in Sources */,
+				CDDA0ADB1EA73AA700F2934E /* LXSettingVC.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CD491A7A1EA6F239007C7359 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD491A7B1EA6F239007C7359 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD491A7E1EA6F239007C7359 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CD491A7F1EA6F239007C7359 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD491A811EA6F239007C7359 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99BC4FAC174FE156A0F65D17 /* Pods-LXIntercom.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U38DW7396K;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LXIntercom/LXPCH.pch";
+				INFOPLIST_FILE = LXIntercom/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lx.LXIntercom;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CD491A821EA6F239007C7359 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F55335D9803221B47FE3FF9A /* Pods-LXIntercom.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U38DW7396K;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LXIntercom/LXPCH.pch";
+				INFOPLIST_FILE = LXIntercom/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lx.LXIntercom;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD491A641EA6F239007C7359 /* Build configuration list for PBXProject "LXIntercom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD491A7E1EA6F239007C7359 /* Debug */,
+				CD491A7F1EA6F239007C7359 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD491A801EA6F239007C7359 /* Build configuration list for PBXNativeTarget "LXIntercom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD491A811EA6F239007C7359 /* Debug */,
+				CD491A821EA6F239007C7359 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD491A611EA6F239007C7359 /* Project object */;
+}

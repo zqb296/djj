@@ -1,0 +1,26 @@
+//
+//  LXPCH.pch
+//  LXIntercom
+//
+//  Created by 余志杰 on 17/4/20.
+//  Copyright © 2017年 LX. All rights reserved.
+//
+
+#ifndef LXPCH_pch
+#define LXPCH_pch
+
+#import <YYModel.h>
+#import "LXUITool.h"
+#import "LXDataManager.h"
+#import "LXUserM.h"
+
+#define kNoticeKey_UserLoginSuccessed        @"kNoticeKey_UserLoginSuccessed"  //登录成功
+#define kNoticeKey_UserVoiceRequest          @"kNoticeKey_UserVoiceRequest"    //语音请求
+#define kNoticeKey_UserVoiceConfirm          @"kNoticeKey_UserVoiceConfirm"    //语音请求确认
+
+#define kAlertMsg(msg)    \
+dispatch_async(dispatch_get_main_queue(), ^{\
+[[[UIAlertView alloc] initWithTitle:@"提示" message:msg delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil] show];\
+});
+
+#endif /* LXPCH_pch */

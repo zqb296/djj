@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ChatVC-->
+        <scene sceneID="WPs-Rj-Ndu">
+            <objects>
+                <viewController storyboardIdentifier="LXChatVC" id="pC1-yp-F6T" customClass="LXChatVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xFW-jd-9j3"/>
+                        <viewControllerLayoutGuide type="bottom" id="AI5-sj-HBc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3gz-LT-1Jx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqI-uF-GoO">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="eFt-Yb-5k7"/>
+                                    <constraint firstAttribute="width" constant="30" id="uqx-DU-fpV"/>
+                                </constraints>
+                                <state key="normal" title="X"/>
+                                <connections>
+                                    <action selector="closeAction:" destination="pC1-yp-F6T" eventType="touchUpInside" id="3ch-gJ-vVp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xla-7g-a4F" customClass="LXTalkingButton">
+                                <color key="backgroundColor" red="0.1058823529" green="0.1764705882" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Go7-Fl-r08"/>
+                                    <constraint firstAttribute="height" constant="200" id="UA8-Zx-qPU"/>
+                                </constraints>
+                                <state key="normal" image="microphone.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="stop.png"/>
+                                <connections>
+                                    <action selector="startAction" destination="pC1-yp-F6T" eventType="touchUpInside" id="iO1-U9-byf"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.png" translatesAutoresizingMaskIntoConstraints="NO" id="s9J-5j-6UK">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="3RX-l9-UnN"/>
+                                    <constraint firstAttribute="height" constant="150" id="Hih-m9-wHm"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="s9J-5j-6UK" firstAttribute="top" secondItem="xFW-jd-9j3" secondAttribute="bottom" constant="66" id="HFJ-4e-Vxt"/>
+                            <constraint firstItem="s9J-5j-6UK" firstAttribute="centerX" secondItem="3gz-LT-1Jx" secondAttribute="centerX" id="HfU-Ce-RIm"/>
+                            <constraint firstItem="aqI-uF-GoO" firstAttribute="top" secondItem="xFW-jd-9j3" secondAttribute="bottom" constant="8" id="bn0-Mg-myw"/>
+                            <constraint firstItem="AI5-sj-HBc" firstAttribute="top" secondItem="xla-7g-a4F" secondAttribute="bottom" constant="50" id="lJd-xo-Xvx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aqI-uF-GoO" secondAttribute="trailing" constant="8" id="tJ4-xM-B0T"/>
+                            <constraint firstItem="xla-7g-a4F" firstAttribute="centerX" secondItem="3gz-LT-1Jx" secondAttribute="centerX" id="wwk-cq-CeQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="startBtn" destination="xla-7g-a4F" id="Y6w-6h-i8f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1FM-Pj-qAk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2263.1999999999998" y="43.628185907046479"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="microphone.png" width="75" height="75"/>
+        <image name="photo.png" width="200" height="200"/>
+        <image name="stop.png" width="50" height="50"/>
+    </resources>
+</document>
