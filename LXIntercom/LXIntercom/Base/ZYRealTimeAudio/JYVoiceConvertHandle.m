@@ -14,7 +14,7 @@
 
 #define kRecordDataPacketsSize   (1024)
 
-#define kOutoutBus 0
+#define kOutputBus 0
 #define kInputBus  1
 
 //存取PCM原始数据的节点
@@ -175,9 +175,11 @@ RecordStruct    recordStruct;
                "couldnt set remote i/o render callback for input");
 	
 	UInt32 echoCancellation = 0;//0 开启回音消除
-	OSStatus result = AudioUnitSetProperty(_toneUnit, kAUVoiceIOProperty_BypassVoiceProcessing, kAudioUnitScope_Global, 0, &echoCancellation, sizeof(echoCancellation));
+	OSStatus result = AudioUnitSetProperty(_toneUnit, kAUVoiceIOProperty_BypassVoiceProcessing, kAudioUnitScope_Global, kOutputBus, &echoCancellation, sizeof(echoCancellation));
 	
+	result = AudioUnitSetProperty(_toneUnit, kAUVoiceIOProperty_BypassVoiceProcessing, kAudioUnitScope_Global, kInputBus, &echoCancellation, sizeof(echoCancellation));
 	CheckError(result,"Error setting passVoiceProcessing");
+	
     CheckError(AudioUnitInitialize(_toneUnit),
                "couldn't initialize the remote I/O unit");
 }

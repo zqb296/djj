@@ -10,7 +10,7 @@
 
 @protocol JYVoiceConvertHandleDelegate <NSObject>
 
--(void)covertedData:(NSData *)data;
+- (void)covertedData:(NSData *)data;
 
 @end
 
