@@ -23,4 +23,6 @@ dispatch_async(dispatch_get_main_queue(), ^{\
 [[[UIAlertView alloc] initWithTitle:@"提示" message:msg delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil] show];\
 });
 
+#define kServerAddress @"59.61.83.190"
+
 #endif /* LXPCH_pch */

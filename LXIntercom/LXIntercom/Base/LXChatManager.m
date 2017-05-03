@@ -39,7 +39,7 @@
     
     if (currentUser) {
         MQTTCFSocketTransport *transport = [[MQTTCFSocketTransport alloc] init];
-        transport.host = @"192.168.1.163";
+        transport.host = kServerAddress;
         transport.port = 1883;
 		
         
@@ -83,25 +83,24 @@
 - (void)pushData:(id)data toTopic:(NSString *)topic
 {
 	
-	[[JYVoiceConvertHandle shareInstance] playWithData:data];
-//    NSData *pushData = data;
-//    if ([data isKindOfClass:[NSString class]]) {
-//        pushData = [data dataUsingEncoding:NSUTF8StringEncoding];
-//    }
-//    
-//    [self.session publishAndWaitData:pushData
-//                             onTopic:topic
-//                              retain:NO
-//                                 qos:MQTTQosLevelAtMostOnce];
+    NSData *pushData = data;
+    if ([data isKindOfClass:[NSString class]]) {
+        pushData = [data dataUsingEncoding:NSUTF8StringEncoding];
+    }
+    
+    [self.session publishAndWaitData:pushData
+                             onTopic:topic
+                              retain:NO
+                                 qos:MQTTQosLevelAtMostOnce];
 }
 
 - (void)newMessage:(MQTTSession *)session data:(NSData *)data onTopic:(NSString *)topic qos:(MQTTQosLevel)qos retained:(BOOL)retained mid:(unsigned int)mid
 {
-//    if ([topic containsString:@"voice"])
-//    {
-//        [[JYVoiceConvertHandle shareInstance] playWithData:data];
-//    }
-// 
+    if ([topic containsString:@"voice"])
+    {
+        [[JYVoiceConvertHandle shareInstance] playWithData:data];
+    }
+ 
 }
 
 

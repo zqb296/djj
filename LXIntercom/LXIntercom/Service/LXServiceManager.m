@@ -9,7 +9,7 @@
 #import "LXServiceManager.h"
 #import <AFNetworking.h>
 
-static NSString *kBaseUrl   = @"http://192.168.1.163:3883/api/";
+#define  kBaseUrl     [NSString stringWithFormat:@"http://%@:3883/api/",kServerAddress]
 
 @implementation LXServiceManager
 
