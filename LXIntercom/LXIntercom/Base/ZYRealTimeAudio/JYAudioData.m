@@ -1,6 +1,6 @@
 //
-//  BNRAudioData.m
-//  BleVOIP
+//  JYAudioData.m
+//  ZYRealTimeAudio
 //
 //  Created by JustinYang on 16/6/30.
 //  Copyright © 2016年 JustinYang. All rights reserved.

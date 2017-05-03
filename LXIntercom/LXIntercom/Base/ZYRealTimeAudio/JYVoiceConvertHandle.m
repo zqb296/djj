@@ -1,6 +1,6 @@
 //
-//  VoiceConvertHandle.m
-//  BleVOIP
+//  JYVoiceConvertHandle.m
+//  ZYRealTimeAudio
 //
 //  Created by JustinYang on 16/6/14.
 //  Copyright © 2016年 JustinYang. All rights reserved.
@@ -120,7 +120,7 @@ RecordStruct    recordStruct;
     NSError *error;
     self.session = [AVAudioSession sharedInstance];
     
-    [self.session setCategory:AVAudioSessionCategoryPlayAndRecord withOptions:AVAudioSessionCategoryOptionDefaultToSpeaker error:nil];
+	[self.session setCategory:AVAudioSessionCategoryPlayAndRecord error:&error];
     kHandleError(error);
     //route变化监听
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(audioSessionRouteChangeHandle:) name:AVAudioSessionRouteChangeNotification object:self.session];
