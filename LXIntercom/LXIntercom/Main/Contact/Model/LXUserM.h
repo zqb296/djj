@@ -24,4 +24,7 @@
 @property (nonatomic, copy) NSString *nickname;
 @property (nonatomic, copy) NSString *pwd;
 
+@property (nonatomic, copy) NSString *selfTopic;
+
+
 @end

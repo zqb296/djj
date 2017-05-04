@@ -24,4 +24,13 @@
     return nil;
 }
 
+- (NSString *)selfTopic
+{
+	if (self.userid) {
+		return [NSString stringWithFormat:@"user/%@/#",self.userid];
+	}else{
+		return nil;
+	}
+}
+
 @end

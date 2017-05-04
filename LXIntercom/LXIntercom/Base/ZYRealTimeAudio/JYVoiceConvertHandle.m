@@ -7,10 +7,10 @@
 //
 
 #define kHandleError(error)  if(error){ NSLog(@"%@",error); exit(1);}
-#define kSmaple     44100
-#define kDuration   0.005
+#define kSmaple     44100.f
 #define kPlaySize   1
 #define kBufferNums   3
+#define kPacketNumFrames   1024
 
 #define kRecordDataPacketsSize   (1024)
 
@@ -120,12 +120,17 @@ RecordStruct    recordStruct;
     NSError *error;
     self.session = [AVAudioSession sharedInstance];
     
-	[self.session setCategory:AVAudioSessionCategoryPlayAndRecord error:&error];
+//	[self.session setCategory:AVAudioSessionCategoryPlayAndRecord error:&error];
+//	[self.session  overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:nil];
+
+	[self.session setCategory:AVAudioSessionCategoryPlayAndRecord withOptions:AVAudioSessionCategoryOptionDefaultToSpeaker error:&error];
+
     kHandleError(error);
     //route变化监听
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(audioSessionRouteChangeHandle:) name:AVAudioSessionRouteChangeNotification object:self.session];
-    
-    [self.session setPreferredIOBufferDuration:kDuration error:&error];
+	
+	NSTimeInterval duration = kPacketNumFrames/kSmaple;
+    [self.session setPreferredIOBufferDuration:duration error:&error];
     kHandleError(error);
     [self.session setPreferredSampleRate:kSmaple error:&error];
     kHandleError(error);
@@ -156,11 +161,17 @@ RecordStruct    recordStruct;
                          kInputBus,
                          &enable,
                          sizeof(enable));
-    
-    
-    
+	
+	AudioUnitSetProperty(_toneUnit,
+						 kAudioOutputUnitProperty_EnableIO,
+						 kAudioUnitScope_Output,
+						 kOutputBus,
+						 &enable,
+						 sizeof(enable));
+	
+	
     _recordFormat = [self getRecordAudioFormat];
-    
+	
     CheckError(AudioUnitSetProperty(_toneUnit,
                                     kAudioUnitProperty_StreamFormat,
                                     kAudioUnitScope_Output, kInputBus,
@@ -175,9 +186,9 @@ RecordStruct    recordStruct;
                "couldnt set remote i/o render callback for input");
 	
 	UInt32 echoCancellation = 0;//0 开启回音消除
-	OSStatus result = AudioUnitSetProperty(_toneUnit, kAUVoiceIOProperty_BypassVoiceProcessing, kAudioUnitScope_Global, kOutputBus, &echoCancellation, sizeof(echoCancellation));
+	OSStatus result = AudioUnitSetProperty(_toneUnit, kAUVoiceIOProperty_BypassVoiceProcessing, kAudioUnitScope_Output, kOutputBus, &echoCancellation, sizeof(echoCancellation));
 	
-	result = AudioUnitSetProperty(_toneUnit, kAUVoiceIOProperty_BypassVoiceProcessing, kAudioUnitScope_Global, kInputBus, &echoCancellation, sizeof(echoCancellation));
+	result = AudioUnitSetProperty(_toneUnit, kAUVoiceIOProperty_BypassVoiceProcessing, kAudioUnitScope_Input, kInputBus, &echoCancellation, sizeof(echoCancellation));
 	CheckError(result,"Error setting passVoiceProcessing");
 	
     CheckError(AudioUnitInitialize(_toneUnit),
